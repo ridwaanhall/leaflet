@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import MainView
+from . import views
 
 urlpatterns = [
-    path('', MainView.as_view(), name='main_view'),
+    path('', views.LeafletView.as_view(), name='leaflet'),
 ]
