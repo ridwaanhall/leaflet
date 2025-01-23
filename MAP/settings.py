@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     'LeafletSimple',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
