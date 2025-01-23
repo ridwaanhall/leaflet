@@ -1,10 +1,10 @@
 from django.views.generic import TemplateView
 
-class LeafletAView(TemplateView):
-    template_name = 'LeafletSimple/leaflet-a.html'
-    
-class LeafletBView(TemplateView):
-    template_name = 'LeafletSimple/leaflet-b.html'
-    
-class LeafletCView(TemplateView):
-    template_name = 'LeafletSimple/leaflet-c.html'
+views = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k']
+
+for view in views:
+    globals()[f'Leaflet{view.upper()}View'] = type(
+        f'Leaflet{view.upper()}View',
+        (TemplateView,),
+        {'template_name': f'LeafletSimple/{view}.html'}
+    )

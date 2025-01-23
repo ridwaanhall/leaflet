@@ -2,7 +2,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('a/', views.LeafletAView.as_view(), name='leaflet-a'),
-    path('b/', views.LeafletBView.as_view(), name='leaflet-b'),
-    path('c/', views.LeafletCView.as_view(), name='leaflet-c'),
+    path(f'{view}/', getattr(views, f'Leaflet{view.upper()}View').as_view(), name=f'leaflet_{view}')
+    for view in ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k']
 ]
