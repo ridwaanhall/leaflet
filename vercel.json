@@ -3,20 +3,17 @@
         {
             "src": "MAP/wsgi.py",
             "use": "@vercel/python",
-            "config": {
-                "maxLambdaSize": "15mb",
-                "runtime": "python3.12.0"
-            }
+            "config": { "maxLambdaSize": "15mb", "runtime": "python3.12.0" }
         }
     ],
     "routes": [
         {
-            "src": "/(.*)",
-            "dest": "MAP/wsgi.py"
-        },
-        {
             "src": "static/(.*)",
             "dest": "staticfiles/$1"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "MAP/wsgi.py"
         }
     ]
 }
