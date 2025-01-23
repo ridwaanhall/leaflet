@@ -4,4 +4,5 @@ from . import views
 urlpatterns = [
     path('a/', views.LeafletAView.as_view(), name='leaflet-a'),
     path('b/', views.LeafletBView.as_view(), name='leaflet-b'),
+    path('c/', views.LeafletCView.as_view(), name='leaflet-c'),
 ]
