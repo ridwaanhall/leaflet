@@ -29,6 +29,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '.vercel.app',
     '.ridwaanhall.me',
+    'localhost',
+    '127.0.0.1',
 ]
 
 
